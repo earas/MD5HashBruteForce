@@ -3,8 +3,6 @@
 #include "md5.h"
 #include <string>
 
-
-
 using std::cout; using std::endl;
 using namespace std;
 
@@ -90,8 +88,6 @@ void readFile() {
 	};
 }
 
-
-
 int main(int argc, char* argv[])
 {
 
@@ -100,14 +96,14 @@ int main(int argc, char* argv[])
 		'k' ,'l','m','n','o','p','q' ,'r','s', 't' ,'u','v', 'w',
 		'x', 'y' ,'z','1', '2' ,'3','4', '5' ,'6','7','8','9', '0' };
 
-	int k = 15;
-
 	int size = sizeof(set1) / sizeof(set1[0]);
-
-	printAllKLength(set1, k, size);
-
+	
+	for (int k = 1; k < 15; k++) {	
+		cout << k << " digit is testing..." << endl;
+		printAllKLength(set1, k, size);
+	}
+	
 	//readFile();
-
 
 	return 0;
 }
